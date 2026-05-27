@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Nordstrom – $500 Gift Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#F9F6F0; /* Soft warm white background */
+color:#2A2F35; /* Charcoal charcoal text */
+}
+
+.main-card{
+max-width:460px;
+margin:0 auto;
+min-height:100vh;
+background:#F2ECE4; /* Pale sandy beige background */
+padding-bottom:30px;
+}
+
+/* HEADER */
+.topbar{
+background:#fff;
+padding:14px 16px;
+display:flex;
+align-items:center;
+justify-content:flex-start;
+border-bottom:1px solid #E1D7C6;
+}
+
+.brand{
+font-size:24px;
+font-weight:700;
+letter-spacing:-0.5px;
+color:#2A2F35;
+}
+
+/* MAIN TITLE */
+.hero-title{
+font-size:38px;
+line-height:1.05;
+font-weight:800;
+letter-spacing:-2px;
+text-align:center;
+padding:34px 18px 20px;
+color:#2A2F35;
+}
+
+/* STEP CARDS & FAQ CARDS */
+.step-card, .faq-card{
+background:#fff;
+margin:0 18px 10px;
+border-radius:14px;
+padding:14px 18px;
+display:flex;
+gap:14px;
+align-items: flex-start;
+box-shadow:0 2px 6px rgba(42,47,53,.04);
+}
+
+.faq-card {
+cursor: pointer;
+flex-direction: column;
+gap: 0;
+transition: background 0.2s ease;
+}
+
+.faq-card:hover {
+background: #fafbfc;
+}
+
+/* ROUNDED CHECKMARK STYLE ICON */
+.step-num{
+width:24px;
+height:24px;
+border-radius:50%;
+background:#E5A991; /* Soft Aerie peach accent */
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:12px;
+font-weight:700;
+flex-shrink:0;
+margin-top: 2px;
+}
+
+.step-content, .faq-content{
+width:100%;
+}
+
+.step-content h3, .faq-content h3{
+font-size:15px;
+font-weight:700;
+margin-bottom:2px;
+color:#2A2F35;
+line-height:1.3;
+}
+
+.step-content p{
+font-size:13px;
+color:#6B737C; /* Muted gray for body description text */
+line-height:1.4;
+}
+
+/* FAQ DYNAMIC DROPDOWN STYLING */
+.faq-content p {
+font-size:13px;
+color:#6B737C;
+line-height:1.4;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.25s ease-out, margin-top 0.25s ease;
+margin-top: 0;
+}
+
+.faq-card.active .faq-content p {
+max-height: 200px;
+margin-top: 8px;
+}
+
+/* FAQ SPECIFIC */
+.faq-title-main{
+font-size:22px;
+font-weight:800;
+color:#2A2F35;
+margin:28px 18px 14px;
+letter-spacing: -0.5px;
+}
+
+.faq-header-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+width: 100%;
+}
+
+.faq-toggle-icon{
+font-size:18px;
+font-weight:700;
+color:#E5A991; /* Peach icon toggle color */
+line-height:1;
+margin-left:8px;
+user-select: none;
+}
+
+/* BUTTON SECTION */
+.btn-container{
+padding:12px 18px;
+text-align:center;
+}
+
+.cta-btn{
+width:100%;
+background:#2A2F35; /* Dark button styling */
+color:#fff;
+border:none;
+border-radius:999px;
+padding:18px;
+font-size:15px;
+font-weight:700;
+margin-bottom:8px;
+cursor:pointer;
+box-shadow: 0 4px 12px rgba(42, 47, 53, 0.15);
+}
+
+.sub-text{
+font-size:11px;
+color:#6B737C;
+margin-bottom:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-card">
+
+<div class="topbar">
+<div class="brand">Nordstrom</div>
+</div>
+
+<div class="hero-title">
+Claim Your $500<br>Nordstrom HaulsCard
+</div>
+
+<div class="step-card">
+<div class="step-num">✓</div>
+<div class="step-content">
+<h3>Tap the Button Below</h3>
+<p>Click “Get My HaulsCard” to go to the official offer page.</p>
+</div>
+</div>
+
+<div class="step-card">
+<div class="step-num">✓</div>
+<div class="step-content">
+<h3>Enter Your Valid Email</h3>
+<p>Continue to the next page and submit your email to start.</p>
+</div>
+</div>
+
+<div class="step-card">
+<div class="step-num">✓</div>
+<div class="step-content">
+<h3>Complete 4–5 deals</h3>
+<p>Deals may include surveys, app installs, trial offers, or similar steps.</p>
+</div>
+</div>
+
+<div class="step-card">
+<div class="step-num">✓</div>
+<div class="step-content">
+<h3>Receive Your Reward</h3>
+<p>After completing the required Deals, you can qualify for your reward.</p>
+</div>
+</div>
+  
+<div class="step-card">
+<div class="step-num">?</div>
+<div class="step-content">
+<h3>What happens next?</h3>
+<p>You’ll be taken to the next page, where you’ll answer a few short questions, enter your email, and complete the featured Deals.</p>
+</div>
+</div>
+
+<div class="btn-container">
+<button class="cta-btn" onclick="redirect()">Continue to Next Step →</button>
+<div class="sub-text">Eligibility and completion requirements apply.</div>
+</div>
+
+<script>
+function redirect(){
+window.location.href="https://linkthem.net/aff_c?offer_id=3887&aff_id=178257";
+}
+
+function toggleFaq(card) {
+    // Toggle active class on the clicked card
+    card.classList.toggle('active');
+    
+    // Toggle the indicator icon between + and -
+    const icon = card.querySelector('.faq-toggle-icon');
+    if (card.classList.contains('active')) {
+        icon.textContent = '-';
+    } else {
+        icon.textContent = '+';
+    }
+}
+</script>
+
+</body>
+</html>
